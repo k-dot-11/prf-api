@@ -8,7 +8,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-You need to have Node.js and npm installed on your machine. This project was built using Node.js version 14.17.0 and npm version 6.14.13.
+You need to have Node.js and npm installed on your machine. This project was built using Node.js version v20.12.2 and npm version 10.8.1.
 
 ### Installing
 
