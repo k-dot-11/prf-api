@@ -1,0 +1,56 @@
+{
+  "https://www.transfermarkt.com/spielbericht/index/spielbericht/4359329_true": {
+    "data": {
+      "teamName": "Germany",
+      "startingPlayers": [
+        "Neuer",
+        "Rüdiger",
+        "Schlotterb.",
+        "Raum",
+        "Kimmich",
+        "Andrich",
+        "Kroos",
+        "Gündoğan",
+        "Havertz",
+        "Musiala",
+        "Sané"
+      ],
+      "subs": [
+        "Waldemar Anton",
+        "Benjamin Henrichs",
+        "Emre Can",
+        "Florian Wirtz",
+        "Niclas Füllkrug"
+      ],
+      "title": "Germany vs Denmark"
+    },
+    "expiry": 1721161313181
+  },
+  "https://www.transfermarkt.com/spielbericht/index/spielbericht/4359329_false": {
+    "data": {
+      "teamName": "Denmark",
+      "startingPlayers": [
+        "Schmeichel",
+        "Andersen",
+        "Vestergaard",
+        "Christensen",
+        "Maehle",
+        "Bah",
+        "Højbjerg",
+        "Delaney",
+        "Eriksen",
+        "Skov Olsen",
+        "Højlund"
+      ],
+      "subs": [
+        "Victor Kristiansen",
+        "Christian Nørgaard",
+        "Jacob Bruun Larsen",
+        "Jonas Wind",
+        "Yussuf Poulsen"
+      ],
+      "title": "Germany vs Denmark"
+    },
+    "expiry": 1721161621235
+  }
+}
