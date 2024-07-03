@@ -5,6 +5,7 @@ const admin = require("firebase-admin");
 const scrapeData = require("./scraper");
 const firebaseUtils = require("./firebase_middleware");
 const { cacheResponse, getCachedResponse } = require("./cache_utils");
+const { job } = require("./cron_job");
 
 require("dotenv").config();
 
@@ -53,14 +54,25 @@ app.post("/createForm", firebaseUtils.checkFirebaseToken, async (req, res) => {
     }
 });
 
-// Cache Metrics
-// Request: 21.494s
-// Request: 13.409s
+const pingRequestMiddleware = (req, res, next) => {
+    const token = req.headers.authorization;
+    if (token !== process.env.ping_token) {
+        res.status(401).send("Unauthorized");
+        return;
+    }
+    next();
+};
 
-const port = process.env.PORT || 8000;
+app.get("/" || "/ping", pingRequestMiddleware, (req, res) => {
+    res.status(200);
+    res.send("pong");
+});
+
+const port = process.env.PORT || 5000;
 const server = app.listen(port, () => {
     console.log("Server is running on port 8000");
 });
+job.start();
 
 process.on("SIGINT", () => {
     console.log("Received SIGINT. Gracefully shutting down.");
